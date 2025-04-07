@@ -1,20 +1,41 @@
-import React, { useEffect } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import { View, Image, StyleSheet, Animated } from 'react-native';
 
 const SplashScreenComponent = ({ navigation }) => {
+  // Create an Animated Value for opacity, starting at 0 (completely transparent)
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  
   useEffect(() => {
-    // Navigate to Login after 3 seconds
+    // Start the fade-in animation
+    Animated.timing(
+      fadeAnim,
+      {
+        toValue: 1,           // Animate to opacity: 1 (fully visible)
+        duration: 3000,       // Animation duration in ms (2 seconds)
+        useNativeDriver: true // Better performance
+      }
+    ).start();
+    
+    // Navigate to Login after 3 seconds (after animation completes)
     const timer = setTimeout(() => {
-      navigation.navigate('Login'); // Navigate to the Login screen
+      navigation.replace('Login'); // Replace instead of navigate to prevent going back
     }, 3000);
 
     // Cleanup timer on component unmount
     return () => clearTimeout(timer);
-  }, [navigation]);
+  }, [fadeAnim, navigation]);
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/logo.png')} style={styles.logo} />
+      <Animated.Image 
+        source={require('../../assets/logo.png')} 
+        style={[
+          styles.logo,
+          {
+            opacity: fadeAnim // Bind opacity to animated value
+          }
+        ]} 
+      />
     </View>
   );
 };

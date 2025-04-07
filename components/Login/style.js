@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: 'green',
   },
+
+  skipButton: {
+    backgroundColor: "#FFA000",
+    marginTop: 10,
+  },
+  
   input: {
     width: '100%',
     padding: 10,

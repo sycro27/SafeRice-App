@@ -100,13 +100,10 @@ export default function Disease_Model() {
   return (
     <View style={styles.container}>
       <ImageBackground
-          source={require('../../assets/riceback.jpg')}
+          source={require('../../assets/background.png')}
           style={styles.backgroundImage}
         >
-          <BlurView style={styles.absolute} intensity={50} tint="light" />
-        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <Text style={styles.backButtonText}>Back to Menu</Text>
-        </TouchableOpacity>
+
         <Text style={styles.title}>Disease Diagnosis</Text>
         {image || photo ? (
           <Image source={{ uri: photo || image }} style={styles.imagePreview} />
@@ -155,7 +152,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     marginBottom: 20,
-    color: '#333',
+    color: 'black',
+    fontWeight: 'bold',
   },
   backgroundImage: {
     flex: 1,
@@ -171,7 +169,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: 'yellowgreen',
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -181,7 +179,7 @@ const styles = StyleSheet.create({
   },
 
   buttonDiagnose: {
-    backgroundColor: 'blue',
+    backgroundColor: 'lightblue',
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -191,7 +189,7 @@ const styles = StyleSheet.create({
   },
 
   buttonReset: {
-    backgroundColor: 'red',
+    backgroundColor: 'lightcoral',
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -200,7 +198,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   buttonText: {
-    color: '#fff',
+    color: 'black',
     fontSize: 18,
     fontWeight: '600',
   },

@@ -61,10 +61,9 @@ const SignUp = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../../assets/riceback.jpg")}
+        source={require("../../assets/background.png")}
         style={styles.backgroundImage}
       >
-        <BlurView style={styles.absolute} intensity={50} tint="light" />
 
         <Text style={styles.title}>Sign Up</Text>
 
@@ -149,7 +148,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     fontWeight: "700",
-    color: "blue",
+    color: "black",
+    fontWeight: "bold",
     marginBottom: 30,
     textAlign: "center",
   },
@@ -158,9 +158,9 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     marginVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#fff",
+    borderBottomColor: "black",
     fontSize: 16,
-    color: "#fff",
+    color: "black",
     backgroundColor: "transparent",
     textAlign: "center",
   },
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   button: {
-    backgroundColor: "#4CAF50",
+    backgroundColor: "yellowgreen",
     paddingVertical: 14,
     paddingHorizontal: 40,
     borderRadius: 25,
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   buttonText: {
-    color: "#fff",
+    color: "black",
     fontSize: 16,
     fontWeight: "600",
     textAlign: "center",

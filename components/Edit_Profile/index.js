@@ -107,11 +107,7 @@ const EditProfile = ({ navigation }) => {
       source={require('../../assets/riceback.jpg')} // Path to your background image
       style={styles.backgroundImage}
     >
-      <BlurView
-        style={styles.absolute}
-        intensity={50}
-        tint="light"
-      />
+
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -195,7 +191,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 36,
     fontWeight: '700',
-    color: '#333',
+    color: 'black',
     marginBottom: 30,
     textAlign: 'center',
   },
@@ -218,14 +214,14 @@ const styles = StyleSheet.create({
     borderBottomColor: '#4CAF50',
     fontSize: 16,
     color: '#333',
-    backgroundColor: 'transparent',
+    backgroundColor: 'yellowgreen',
     textAlign: 'center',
   },
   saveButton: {
     marginTop: 20,
     paddingVertical: 10,
     paddingHorizontal: 30,
-    backgroundColor: '#4CAF50',
+    backgroundColor: 'yellowgreen',
     borderRadius: 25,
     elevation: 3,
   },
@@ -256,7 +252,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 18,
-    color: 'red',
+    color: 'lightcoral',
   },
 });
 

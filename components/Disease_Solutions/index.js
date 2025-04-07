@@ -62,10 +62,10 @@ export default function Disease_Solutions() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <ImageBackground
-          source={require('../../assets/riceback.jpg')}
+          source={require('../../assets/background.png')}
           style={styles.backgroundImage}
         >
-          <BlurView style={styles.absolute} intensity={50} tint="light" />
+
       <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
@@ -116,7 +116,8 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     marginBottom: 30,
-    color: '#333',
+    color: 'black',
+    fontWeight: 'bold',
   },
   backgroundImage: {
     flex: 1,
@@ -188,25 +189,25 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: 'yellowgreen',
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',
-    shadowColor: '#4CAF50',
+    shadowColor: '#90ee90',
     shadowOpacity: 0.15,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 5,
     elevation: 3,
   },
   buttonText: {
-    color: '#ffffff',
+    color: 'black',
     fontSize: 18,
     fontWeight: '600',
   },
   solutionContainer: {
     marginTop: 20,
     padding: 15,
-    backgroundColor: '#eafaf1',
+    backgroundColor: 'yellowgreen',
     borderRadius: 8,
     width: '90%',
     alignItems: 'center',
@@ -218,14 +219,13 @@ const styles = StyleSheet.create({
   },
   solutionText: {
     fontSize: 16,
-    color: '#333',
+    color: 'black',
     textAlign: 'center',
   },
   centeredContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f9f9f9',
   },
   loadingText: {
     marginTop: 10,

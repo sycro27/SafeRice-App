@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 const About = () => {
   return (
     <ImageBackground
-      source={require('../../assets/riceback.jpg')}  // Path to your background image
+      source={require('../../assets/background.png')}  // Path to your background image
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
